@@ -18,3 +18,7 @@ export function formatDateTime(timestamp) {
     timeZoneName: "short",
   }).format(new Date(timestamp));
 }
+
+export function getUserTimezone() {
+  return new Intl.DateTimeFormat().resolvedOptions();
+}
